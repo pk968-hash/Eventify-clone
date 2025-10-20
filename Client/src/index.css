@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary: #0096c7;
+  --border-primary: #0096c7;
+  --color-primary-hover: #0077b6;
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  background-image: url("/background_2.png");
+  background-color: #f6f8fa;
+  background-repeat: repeat;
+  background-size: auto;
+  background-position: top left;
+  background-attachment: scroll;
+}
+
+.bg-primary {
+  background-color: #0096c7;
+}
+.text-primary {
+  color: #0096c7;
+}
+
+.bg-primary-hover:hover {
+  background-color: #0077b6;
+}
+.text-primary-hover:hover {
+  color: #0077b6;
+}
+
+.mobile-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #fff;
+  z-index: 50;
+  transform: translateX(-100%);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 2px 0 16px rgba(0, 0, 0, 0.08);
+}
+
+.mobile-sidebar.active {
+  transform: translateX(0);
+}
+
+.lg-sidebar {
+  position: fixed;
+  top: 10%;
+  left: 0;
+  width: 100vw;
+  max-width: 15rem;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  z-index: 50;
+  transform: translateX(-100%);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 2px 0 16px rgba(0, 0, 0, 0.08);
+}
+.lg-sidebar.active {
+  transform: translateX(15%);
+}
+
+.text-gradient {
+  display: inline-block; /* prevents clipping descenders */
+  background: linear-gradient(90deg, #144386, #1661cb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
